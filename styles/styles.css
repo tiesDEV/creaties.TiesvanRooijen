@@ -1,0 +1,54 @@
+
+/* ------ BASIC INFORMATION ------ */
+
+body {
+  background-color: #FBFAFD;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+span {
+  display: block;
+  width: 2em;
+  height: .2em;
+  background-color: black;
+  margin-top: .4em;
+}
+
+header li {
+  list-style-type: none;
+}
+
+header .hitmeup {
+  color: #2030EF;
+  text-align: right;
+}
+
+h2 {
+  font-family: montserrat, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1, h3, h4, li {
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
