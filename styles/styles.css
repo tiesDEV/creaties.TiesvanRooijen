@@ -1,6 +1,11 @@
 
 /* ------ BASIC INFORMATION ------ */
 
+body {
+  background-color: #FBFAFD;
+  margin: 0;
+}
+
 main {
   margin-left: 140px;
   margin-right: 140px;
@@ -32,7 +37,13 @@ font-weight: 500;
 font-style: normal;
 }
 
-main {
+button {
+font-family: neue-haas-grotesk-display,sans-serif;
+font-weight: 600;
+font-style: normal;
+}
+
+main, .navbarMobile {
 margin-left: 36px;
 margin-right: 36px;
 }
@@ -41,21 +52,24 @@ section {
 position: relative;
 }
 
-body {
-  background-color: #FBFAFD;
-  margin: 0;
-}
-
 header {
   position: fixed;
   top: 0;
   background-color: white;
   width: 100%;
+  z-index: 1;
 }
+
+/* header nav {
+  z-index: 100;
+  /* -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  opacity: .95; */
+/* } */
 
 header ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-left: 0;
 }
@@ -78,35 +92,112 @@ header .hitmeup {
   text-align: right;
 }
 
-.brand {
-  padding-left: 2em;
+.brandMobile {
+  margin-left: 3.5em;
+}
+
+.hamburgermenu {
+  top: -100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  margin-top: 0;
+  transition: .5s;
+}
+
+.hamburgermenu.openHamburger {
+  top: 0;
+  z-index: -10;
+  margin-top: 2em;
+  transition: .5s;
+}
+
+.hamburgermenu li {
+  font-size: 17px;
+  margin-top: 5em;
 }
 
 .navbarDesktop {
   display: none;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
+    .navbarMobile {
+      display: none;
+    }
 
-@media screen and (min-width: 768px) {
-  .navbarMobile {
-    display: none;
-  }
+    .navbarDesktop {
+      display: flex;
+    }
 
-  .navbarDesktop {
-    display: flex;
-  }
+    main, .navbarDesktop {
+    margin-left: 80px;
+    margin-right: 80px;
+    }
 
-  header ul {
-    justify-content: space-between;
-  }
+    .hamburgermenu {
+      display: none;
+    }
 
-  main, .navbarDesktop {
-  margin-left: 140px;
-  margin-right: 140px;
-  }
+    header ul {
+      justify-content: space-between;
+    }
+
+    .brandDesktop {
+      margin-left: 5em;
+      margin-right: 0;
+    }
 }
+
+@media screen and (min-width: 1024px) {
+
+    .navbarMobile {
+      display: none;
+    }
+
+    .navbarDesktop {
+      display: flex;
+    }
+
+    main, .navbarDesktop {
+    margin-left: 80px;
+    margin-right: 80px;
+    }
+
+    .hamburgermenu {
+      display: none;
+    }
+
+    header ul {
+      justify-content: space-between;
+    }
+
+    main, .navbarDesktop {
+      margin-left: 140px;
+      margin-right: 140px;
+    }
+
+    .brandDesktop {
+      margin-left: 5em;
+      margin-right: 0;
+    }
+  }
 
 .introduction {
   margin-top: 10em;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #2030EF;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 20px 40px;
 }
