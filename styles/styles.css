@@ -1,6 +1,46 @@
 
 /* ------ BASIC INFORMATION ------ */
 
+main {
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+h2 {
+font-family: montserrat, sans-serif;
+font-weight: 600;
+font-style: normal;
+}
+
+h1, h3, h4, li {
+font-family: montserrat, sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+font-family: neue-haas-grotesk-display, sans-serif;
+font-weight: 500;
+font-style: normal;
+}
+
+main {
+margin-left: 36px;
+margin-right: 36px;
+}
+
+section {
+position: relative;
+}
+
 body {
   background-color: #FBFAFD;
   margin: 0;
@@ -8,6 +48,7 @@ body {
 
 header {
   position: fixed;
+  top: 0;
   background-color: white;
   width: 100%;
 }
@@ -15,6 +56,7 @@ header {
 header ul {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding-left: 0;
 }
 
@@ -28,6 +70,7 @@ span {
 
 header li {
   list-style-type: none;
+  font-size: 12px;
 }
 
 header .hitmeup {
@@ -35,20 +78,35 @@ header .hitmeup {
   text-align: right;
 }
 
-h2 {
-  font-family: montserrat, sans-serif;
-  font-weight: 600;
-  font-style: normal;
+.brand {
+  padding-left: 2em;
 }
 
-h1, h3, h4, li {
-  font-family: montserrat, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.navbarDesktop {
+  display: none;
 }
 
-p {
-  font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 500;
-  font-style: normal;
+
+
+@media screen and (min-width: 768px) {
+  .navbarMobile {
+    display: none;
+  }
+
+  .navbarDesktop {
+    display: flex;
+  }
+
+  header ul {
+    justify-content: space-between;
+  }
+
+  main, .navbarDesktop {
+  margin-left: 140px;
+  margin-right: 140px;
+  }
+}
+
+.introduction {
+  margin-top: 10em;
 }
